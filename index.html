@@ -80,6 +80,45 @@
     .project a:hover {
       text-decoration: underline;
     }
+
+.project-content {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+.project-text {
+  flex: 1;
+}
+.project-image {
+  flex: 0 0 300px;
+  text-align: center;
+}
+.project-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.project-image p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+  }
+  .project-image {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+
+    
     .game-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -220,9 +259,12 @@
   </header>
 
   <main>
-    <section>
-      <h2>🚀 Featured Client Project</h2>
-      <div class="project">
+    
+<section>
+  <h2>🚀 Featured Client Project</h2>
+  <div class="project">
+    <div class="project-content">
+      <div class="project-text">
         <h3>AR Product Visualization App – Craftforce Lounge Sculpting</h3>
         <p><strong>Tech Stack:</strong> Unity 2022 LTS, AR Foundation, Unity CCD, AI Logic, C#, Firebase</p>
         <p>Developed a commercial AR visualization app for Craftforce Lounge Sculpting (Hyderabad). Integrated Unity CCD for backend storage and used AI logic for automated interaction flow. Delivered a polished iOS deployment with real-time 3D product visualization capabilities.</p>
@@ -230,7 +272,13 @@
           <strong>🎯 Key Achievement:</strong> Reduced loading times by 40% through asset optimization and implemented seamless AR object placement.
         </div>
       </div>
-    </section>
+      <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1633265486064-086c7d6fcf5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AR App Interface">
+        <p>AR Product Visualization Interface</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section>
       <h2>💼 Professional Experience</h2>
