@@ -16,25 +16,376 @@
     header {
       background: linear-gradient(135deg, #0077ff, #00c3ff);
       color: white;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     header p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-top: 10px;
+      opacity: 0.9;
+    }
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #0077ff;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: transform 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     main {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 0 20px;
+    }
+    section {
+      margin-bottom: 50px;
     }
     h2 {
       color: #0077ff;
       border-bottom: 2px solid #0077ff33;
+      padding-bottom: 8px;
+      font-size: 1.8rem;
+    }
+    .project {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      padding: 25px;
+      transition: transform 0.2s ease;
+    }
+    .project:hover {
+      transform: translateY(-3px);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #0077ff;
+    }
+    .project a {
+      color: #0077ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .game {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .game:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .game-img {
+      border-radius: 15px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .game h4 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+      color: #0077ff;
+    }
+    .game p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .game-promo {
+      background: #e6f0ff;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      border-left: 4px solid #0077ff;
+    }
+    .download-btn {
+      background: linear-gradient(135deg, #0077ff, #00c3ff);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,119,255,0.3);
+    }
+    ul.skills {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    ul.skills li {
+      background: #e6f0ff;
+      border-radius: 6px;
+      padding: 8px 15px;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease;
+    }
+    ul.skills li:hover {
+      transform: translateY(-2px);
+      background: #d4e5ff;
+    }
+    .skills-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .skill-category {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .skill-category h4 {
+      color: #0077ff;
+      margin-top: 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    .experience {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+    .experience h3 {
+      color: #0077ff;
+      margin-top: 0;
+    }
+    .contact-info {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .contact-info a {
+      color: #0077ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      background: #f0f0f0;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👋 Ramesh Gowtham Nemalipuri</h1>
+    <p>Unity Game & AR Developer | 3+ Years Experience | Hyderabad, India</p>
+    <a href="mailto:gowthamfrigate@gmail.com" class="cta-button">📧 Hire Me</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>🚀 Featured Client Project</h2>
+      <div class="project">
+        <h3>AR Product Visualization App – Craftforce Lounge Sculpting</h3>
+        <p><strong>Tech Stack:</strong> Unity 2022 LTS, AR Foundation, Unity CCD, AI Logic, C#, Firebase</p>
+        <p>Developed a commercial AR visualization app for Craftforce Lounge Sculpting (Hyderabad). Integrated Unity CCD for backend storage and used AI logic for automated interaction flow. Delivered a polished Android deployment with real-time 3D product visualization capabilities.</p>
+        <div class="game-promo">
+          <strong>🎯 Key Achievement:</strong> Reduced loading times by 40% through asset optimization and implemented seamless AR object placement.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💼 Professional Experience</h2>
+      <div class="experience">
+        <h3>Unity Game Developer - Frigate Games Pvt. Ltd.</h3>
+        <p><em>Aug 2022 – Present | Hyderabad, India</em></p>
+        <ul>
+          <li>Developed and published 5+ mobile titles on App Store & Play Store with 100K+ combined downloads</li>
+          <li>Built asset streaming pipelines with Unity CCD for scalable LiveOps and dynamic content delivery</li>
+          <li>Integrated Firebase (Analytics, Remote Config, Crashlytics) for data-driven development</li>
+          <li>Implemented Ads (AdMob, IronSource) and IAP purchase/restore flows, increasing revenue by 25%</li>
+          <li>Optimized performance using Unity Profiler & asset optimization, reducing memory usage by 30%</li>
+          <li>Collaborated with designers, artists, and QA in Agile workflows for on-time delivery</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎮 Published Mobile Games</h2>
+      <div class="game-grid">
+
+        <div class="game">
+          <img src="https://via.placeholder.com/300x200/0077ff/ffffff?text=Horse+Simulator" alt="Horse Simulator" class="game-img">
+          <h4>Horse Simulator – Animal Games</h4>
+          <p>Open-world horse racing and training simulator featuring advanced animal AI, realistic speed mechanics, and lifelike animations.</p>
+          <div class="game-promo">
+            <strong>🔥 Featured:</strong> Realistic horse behaviors and dynamic weather system
+          </div>
+          <a href="https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047" target="_blank" class="download-btn">📱 Download on App Store</a>
+        </div>
+
+        <div class="game">
+          <img src="https://via.placeholder.com/300x200/00c3ff/ffffff?text=Lumber+Mill" alt="Idle Lumber Harvester" class="game-img">
+          <h4>Idle Lumber Harvester Mill 3D</h4>
+          <p>Engaging idle resource-management simulation with progressive upgrades, economy balancing, and optimized mobile performance.</p>
+          <div class="game-promo">
+            <strong>💰 Monetization:</strong> IAP for premium upgrades + rewarded ads
+          </div>
+          <a href="https://apps.apple.com/cd/app/idle-lumber-harvester-mill-3d/id6482293206" target="_blank" class="download-btn">📱 Download on App Store</a>
+        </div>
+
+        <div class="game">
+          <img src="https://via.placeholder.com/300x200/0077ff/ffffff?text=Gaming+Cafe" alt="Gaming Cafe" class="game-img">
+          <h4>Gaming Cafe: Internet Game 2024</h4>
+          <p>Manage an internet café business, upgrade PCs, and attract gamers with an in-game economy and progression system.</p>
+          <div class="game-promo">
+            <strong>🏆 Achievement:</strong> 50K+ downloads in first month
+          </div>
+          <a href="https://apps.apple.com/cd/app/gaming-cafe-internet-game-2024/id6479306766" target="_blank" class="download-btn">📱 Download on App Store</a>
+        </div>
+
+        <div class="game">
+          <img src="https://via.placeholder.com/300x200/00c3ff/ffffff?text=Tank+Fight" alt="Tank Fight" class="game-img">
+          <h4>Tank Fight – Battle Simulator</h4>
+          <p>Physics-based tank battle simulator with destructible terrain, tactical AI-driven opponents, and realistic combat mechanics.</p>
+          <div class="game-promo">
+            <strong>🎯 Feature:</strong> Destructible environments & advanced AI
+          </div>
+          <a href="https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613" target="_blank" class="download-btn">📱 Download on App Store</a>
+        </div>
+
+        <div class="game">
+          <img src="https://via.placeholder.com/300x200/0077ff/ffffff?text=BMX+Bike" alt="BMX Bike Games" class="game-img">
+          <h4>Bike Games 2023 – BMX Mad Skills</h4>
+          <p>Fast-paced stunt biking game with realistic physics, intuitive mobile controls, and AdMob/IAP monetization integration.</p>
+          <div class="game-promo">
+            <strong>🚀 Performance:</strong> 60 FPS on mid-range devices
+          </div>
+          <a href="https://apps.apple.com/cd/app/bike-games-2023-bmx-mad-skills/id1627248104" target="_blank" class="download-btn">📱 Download on App Store</a>
+        </div>
+
+        <div class="game">
+          <img src="https://via.placeholder.com/300x200/00c3ff/ffffff?text=Airport+Manager" alt="Airport Manager" class="game-img">
+          <h4>Airport Manager: ATC Commander</h4>
+          <p>Casual time-management game where players coordinate airport operations, aircraft takeoffs, and passenger services.</p>
+          <div class="game-promo">
+            <strong>✈️ Unique:</strong> Real-time ATC simulation with progression
+          </div>
+          <a href="https://apps.apple.com/id/app/airport-manager-atc-commander/id6469615183" target="_blank" class="download-btn">📱 Download on App Store</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>🧰 Technical Skills</h2>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h4>🎯 Core Technologies</h4>
+          <ul class="skills">
+            <li>Unity 3D Engine</li>
+            <li>C# Programming</li>
+            <li>AR Foundation</li>
+            <li>Unity CCD</li>
+            <li>Addressables System</li>
+            <li>Asset Bundles</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>🛠️ Tools & Services</h4>
+          <ul class="skills">
+            <li>Firebase Suite</li>
+            <li>AdMob & IronSource</li>
+            <li>In-App Purchases</li>
+            <li>Git Version Control</li>
+            <li>Unity Profiler</li>
+            <li>Autodesk Maya</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>⚡ Specializations</h4>
+          <ul class="skills">
+            <li>Performance Optimization</li>
+            <li>GC Allocation Reduction</li>
+            <li>UI/UX Design</li>
+            <li>Gameplay Mechanics</li>
+            <li>Agile Development</li>
+            <li>LiveOps Implementation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Education</h2>
+      <div class="experience">
+        <h3>B.Sc. Computer Science</h3>
+        <p><strong>SGT & JVB Degree College, Guntur</strong> | 2019 – 2022</p>
+        <p>GPA: 7.0/10.0 | Focused on software engineering principles, algorithms, and game development fundamentals.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>📬 Let's Connect</h2>
+      <div class="contact-info">
+        <p style="font-size: 1.1rem; margin-bottom: 20px;">Ready to bring your game or AR project to life? Let's discuss how we can create something amazing together!</p>
+        <p>
+          📧 <a href="mailto:gowthamfrigate@gmail.com">gowthamfrigate@gmail.com</a><br>
+          📞 +91-7989513669<br>
+          🔗 <a href="https://www.linkedin.com/in/ramesh-gowtham" target="_blank">linkedin.com/in/ramesh-gowtham</a><br>
+          🎮 <a href="#" target="_blank">View My Portfolio</a><br>
+          📍 Hyderabad, India
+        </p>
+        <a href="mailto:gowthamfrigate@gmail.com" class="cta-button">📧 Start a Project</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Ramesh Gowtham Nemalipuri | Unity & AR Developer Portfolio</p>
+    <p>Built with passion for creating immersive gaming experiences</p>
+  </footer>
+
+</body>
+          </html>      border-bottom: 2px solid #0077ff33;
       padding-bottom: 5px;
     }
     .project {
@@ -194,7 +545,7 @@
       <p>
         📧 <a href="mailto:gowthamfrigate@gmail.com">gowthamfrigate@gmail.com</a><br>
         📞 +91-7989513669<br>
-        🔗 <a href="https://www.linkedin.com/in/ramesh-gowtham" target="_blank">linkedin.com/in/ramesh-gowtham</a><br>
+        🔗 <a href="https://www.linkedin.com/in/ramesh-gowtham-nemalipuri-23034018a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/ramesh-gowtham</a><br>
         📍 Hyderabad, India
       </p>
     </section>
