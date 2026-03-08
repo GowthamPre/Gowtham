@@ -13,6 +13,7 @@ font-family:'Segoe UI',Roboto,Arial;
 margin:0;
 background:#f5f7fa;
 color:#222;
+line-height:1.6;
 }
 
 header{
@@ -40,7 +41,7 @@ padding:12px 30px;
 border-radius:25px;
 text-decoration:none;
 font-weight:bold;
-margin-top:20px;
+margin:10px 8px;
 }
 
 main{
@@ -59,16 +60,12 @@ border-bottom:2px solid #0077ff33;
 padding-bottom:8px;
 }
 
-/* CARD */
-
-.project,.experience,.contact-info{
-background:white;
+.project{
+background:#fff;
 border-radius:12px;
 box-shadow:0 4px 12px rgba(0,0,0,.1);
 padding:25px;
 }
-
-/* AR SECTION */
 
 .project-content{
 display:flex;
@@ -101,48 +98,57 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
-/* GAME CARD */
-
 .game{
 background:white;
 border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,.1);
+box-shadow:0 2px 8px rgba(0,0,0,.1);
 padding:20px;
 display:flex;
 flex-direction:column;
 }
 
 .game-img{
-width:90px;
-height:90px;
-border-radius:20px;
-margin:auto;
-margin-bottom:10px;
-object-fit:cover;
+width:100%;
+height:200px;
+object-fit:contain;
+border-radius:15px;
+background:#f8f9fa;
+margin-bottom:15px;
 }
 
 .game h4{
 color:#0077ff;
-margin:5px 0;
-text-align:center;
+margin:10px 0 5px;
 }
 
 .game p{
+flex-grow:1;
 font-size:.95rem;
 color:#555;
 }
 
-/* MEDIA ROW */
+.game-promo{
+background:#e6f0ff;
+border-radius:8px;
+padding:10px;
+margin-top:10px;
+font-size:.9rem;
+border-left:4px solid #0077ff;
+}
 
-.media-row{
+/* MEDIA CAROUSEL */
+
+.media-carousel{
 display:flex;
 gap:10px;
 overflow-x:auto;
-padding-top:10px;
 scroll-behavior:smooth;
+margin-top:12px;
 }
 
-.media-row::-webkit-scrollbar{display:none;}
+.media-carousel::-webkit-scrollbar{
+display:none;
+}
 
 .media-item{
 min-width:200px;
@@ -164,20 +170,16 @@ height:100%;
 border:none;
 }
 
-/* BUTTON */
-
 .download-btn{
 background:linear-gradient(135deg,#0077ff,#00c3ff);
 color:white;
-padding:10px 18px;
+padding:10px 20px;
 border-radius:20px;
 text-decoration:none;
 font-weight:bold;
-margin-top:12px;
+margin-top:15px;
 align-self:center;
 }
-
-/* SKILLS */
 
 .skills{
 display:flex;
@@ -190,8 +192,6 @@ background:#e6f0ff;
 padding:8px 15px;
 border-radius:6px;
 }
-
-/* FOOTER */
 
 footer{
 text-align:center;
@@ -208,15 +208,18 @@ font-size:.9rem;
 <header>
 
 <h1>👋 Ramesh Gowtham Nemalipuri</h1>
-<p>Unity Game & AR Developer | 3+ Years Experience | Hyderabad, India</p>
+
+<p>Unity Game & AR Developer | 3+ Years Experience | Hyderabad</p>
 
 <a href="mailto:gowthamfrigate@gmail.com" class="cta-button">📧 Hire Me</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" target="_blank" class="cta-button">📄 View Resume</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" download class="cta-button">⬇ Download Resume</a>
 
 </header>
 
 <main>
-
-<!-- AR PROJECT (UNCHANGED) -->
 
 <section>
 
@@ -228,20 +231,24 @@ font-size:.9rem;
 
 <div class="project-text">
 
-<h3>AR Product Visualization App – Craftforce Lounge Sculpting</h3>
+<h3>AR Product Visualization – Craftforce Lounge Sculpting</h3>
 
-<p><b>Tech Stack:</b> Unity 2022 LTS, AR Foundation, Unity CCD, AI Logic, C#, Firebase</p>
+<p><strong>Tech Stack:</strong> Unity 2022 LTS, AR Foundation, Unity CCD, AI Logic, C#, Firebase</p>
 
 <p>
-Developed a commercial AR visualization app for Craftforce Lounge Sculpting
-allowing real-time product placement and visualization.
+Developed a commercial AR visualization application allowing users to place
+and preview furniture models in real-world environments.
 </p>
 
-<div style="margin-top:20px">
+<div class="game-promo">
+<strong>🎯 Key Achievement:</strong> Reduced loading times by 40% through asset optimization.
+</div>
 
-<strong>🎬 Watch Demo:</strong>
+<div style="margin-top:15px">
+
+<strong>🎬 Demo:</strong>
 <a href="https://youtube.com/shorts/5qxHdqqwdP4" target="_blank">
-YouTube Demo →
+Watch AR Demo →
 </a>
 
 </div>
@@ -260,35 +267,6 @@ YouTube Demo →
 
 </section>
 
-
-<!-- EXPERIENCE -->
-
-<section>
-
-<h2>💼 Professional Experience</h2>
-
-<div class="experience">
-
-<h3>Unity Game Developer – Frigate Games Pvt Ltd</h3>
-
-<p><i>Aug 2022 – Present | Hyderabad</i></p>
-
-<ul>
-
-<li>Developed 5+ mobile games with 100K+ downloads</li>
-<li>Implemented monetization using AdMob & IronSource</li>
-<li>Built scalable content pipelines using Unity CCD</li>
-<li>Optimized performance reducing memory usage by 30%</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-<!-- GAMES -->
-
 <section>
 
 <h2>🎮 Published Mobile Games</h2>
@@ -303,9 +281,13 @@ YouTube Demo →
 
 <h4>Horse Simulator – Animal Games</h4>
 
-<p>Open-world horse racing and training simulator with AI behaviour and realistic gameplay.</p>
+<p>Open-world horse racing simulator with AI behaviour and realistic mechanics.</p>
 
-<div class="media-row">
+<div class="game-promo">
+🔥 Realistic horse behaviour & dynamic environments
+</div>
+
+<div class="media-carousel">
 
 <div class="media-item">
 <iframe src="https://www.youtube.com/embed/KJo8JVxrGQs"></iframe>
@@ -335,9 +317,13 @@ YouTube Demo →
 
 <h4>Tank Fight – Battle Simulator</h4>
 
-<p>Physics-based tank combat simulator with AI enemies and destructible environments.</p>
+<p>Physics-based tank battle game with destructible terrain and AI enemies.</p>
 
-<div class="media-row">
+<div class="game-promo">
+🎯 Tactical AI combat and environment destruction
+</div>
+
+<div class="media-carousel">
 
 <div class="media-item">
 <iframe src="https://www.youtube.com/embed/diLICWZz2mw"></iframe>
@@ -353,102 +339,9 @@ YouTube Demo →
 
 </div>
 
-
-<!-- CAFE -->
-
-<div class="game">
-
-<img src="assets/games/cafe/icon.webp" class="game-img">
-
-<h4>Gaming Cafe – Internet Game</h4>
-
-<p>Business simulation where players manage and upgrade a gaming cafe.</p>
-
-<div class="media-row">
-
-<div class="media-item"><img src="assets/games/cafe/1.webp"></div>
-<div class="media-item"><img src="assets/games/cafe/2.webp"></div>
-<div class="media-item"><img src="assets/games/cafe/3.webp"></div>
-
-</div>
-
-<a href="https://apps.apple.com/cd/app/gaming-cafe-internet-game-2024/id6479306766" target="_blank" class="download-btn">App Store</a>
-
-</div>
-
-
-<!-- LUMBER -->
-
-<div class="game">
-
-<img src="assets/games/lumber/icon.webp" class="game-img">
-
-<h4>Idle Lumber Harvester Mill 3D</h4>
-
-<p>Idle resource management simulation with progressive upgrades.</p>
-
-<div class="media-row">
-
-<div class="media-item"><img src="assets/games/lumber/1.webp"></div>
-<div class="media-item"><img src="assets/games/lumber/2.webp"></div>
-<div class="media-item"><img src="assets/games/lumber/3.webp"></div>
-
-</div>
-
-<a href="https://apps.apple.com/cd/app/idle-lumber-harvester-mill-3d/id6482293206" target="_blank" class="download-btn">App Store</a>
-
-</div>
-
-
-<!-- BIKE -->
-
-<div class="game">
-
-<img src="assets/games/bike/icon.webp" class="game-img">
-
-<h4>Bike Games 2023 – BMX</h4>
-
-<p>Fast-paced stunt biking game with physics gameplay.</p>
-
-<div class="media-row">
-
-<div class="media-item"><img src="assets/games/bike/1.webp"></div>
-<div class="media-item"><img src="assets/games/bike/2.webp"></div>
-<div class="media-item"><img src="assets/games/bike/3.webp"></div>
-
-</div>
-
-<a href="https://apps.apple.com/cd/app/bike-games-2023-bmx-mad-skills/id1627248104" target="_blank" class="download-btn">App Store</a>
-
-</div>
-
-
-<!-- AIRPORT -->
-
-<div class="game">
-
-<img src="assets/games/airport/icon.webp" class="game-img">
-
-<h4>Airport Manager – ATC Commander</h4>
-
-<p>Airport management simulator featuring aircraft control systems.</p>
-
-<div class="media-row">
-
-<div class="media-item"><img src="assets/games/airport/1.webp"></div>
-<div class="media-item"><img src="assets/games/airport/2.webp"></div>
-<div class="media-item"><img src="assets/games/airport/3.webp"></div>
-
-</div>
-
-<a href="https://apps.apple.com/id/app/airport-manager-atc-commander/id6469615183" target="_blank" class="download-btn">App Store</a>
-
-</div>
-
 </div>
 
 </section>
-
 
 <section>
 
@@ -468,12 +361,9 @@ YouTube Demo →
 
 </section>
 
-
 <section>
 
 <h2>📬 Contact</h2>
-
-<div class="contact-info">
 
 <p>
 
@@ -484,17 +374,44 @@ YouTube Demo →
 
 </p>
 
-</div>
-
 </section>
 
 </main>
 
 <footer>
 
-<p>© 2025 Ramesh Gowtham Nemalipuri</p>
+<p>© 2026 Ramesh Gowtham Nemalipuri</p>
 
 </footer>
 
+<script>
+
+document.querySelectorAll(".media-carousel").forEach(carousel=>{
+
+let scroll=0;
+
+setInterval(()=>{
+
+if(!carousel.matches(":hover")){
+
+scroll+=220;
+
+if(scroll>=carousel.scrollWidth){
+scroll=0;
+}
+
+carousel.scrollTo({
+left:scroll,
+behavior:"smooth"
+});
+
+}
+
+},3000);
+
+});
+
+</script>
+
 </body>
-                          </html>
+</html>
