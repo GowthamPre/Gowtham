@@ -21,6 +21,8 @@ color:#222;
 line-height:1.6;
 }
 
+/* HEADER */
+
 header{
 background:linear-gradient(135deg,#0066ff,#00c3ff);
 color:white;
@@ -40,7 +42,7 @@ font-size:1.1rem;
 .btn{
 display:inline-block;
 margin-top:15px;
-padding:12px 28px;
+padding:12px 26px;
 background:white;
 color:#0066ff;
 border-radius:30px;
@@ -48,6 +50,8 @@ text-decoration:none;
 font-weight:600;
 margin-right:10px;
 }
+
+/* MAIN */
 
 main{
 max-width:1100px;
@@ -66,12 +70,16 @@ border-bottom:2px solid #e0e7ff;
 padding-bottom:6px;
 }
 
+/* CARD */
+
 .card{
 background:white;
 padding:25px;
 border-radius:12px;
 box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
+
+/* AR PROJECT */
 
 .project-content{
 display:flex;
@@ -92,14 +100,21 @@ width:100%;
 border-radius:12px;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
+
 .project-content{
 flex-direction:column;
 }
+
 .project-image{
 width:100%;
 }
+
 }
+
+/* GAME GRID */
 
 .game-grid{
 display:grid;
@@ -128,10 +143,7 @@ border-radius:10px;
 margin-bottom:10px;
 }
 
-.game h4{
-color:#0066ff;
-margin-bottom:8px;
-}
+/* SCREENSHOTS */
 
 .screens{
 display:grid;
@@ -147,6 +159,8 @@ object-fit:cover;
 border-radius:6px;
 }
 
+/* BUTTON */
+
 .download-btn{
 display:inline-block;
 margin-top:10px;
@@ -157,6 +171,8 @@ border-radius:20px;
 text-decoration:none;
 font-size:14px;
 }
+
+/* SKILLS */
 
 .skills{
 display:flex;
@@ -170,6 +186,8 @@ padding:8px 14px;
 border-radius:6px;
 font-size:14px;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -190,7 +208,10 @@ margin-top:40px;
 <p>Unity Game Developer & AR Developer | 3.5+ Years Experience</p>
 
 <a href="mailto:gowthamfrigate@gmail.com" class="btn">Contact</a>
-<a href="Ramesh_Gowtham_CV.pdf" class="btn">Download Resume</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" target="_blank" class="btn">View Resume</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" download class="btn">Download Resume</a>
 
 </header>
 
@@ -233,12 +254,11 @@ Experienced in gameplay systems, performance optimization, monetization systems,
 <p>
 Developed a commercial AR visualization application allowing users to place
 and preview furniture models in real-world environments using AR.
-
 </p>
 
 <p>
-Implemented optimized asset delivery and interaction systems to ensure
-smooth AR experience on mobile devices.
+Implemented optimized asset delivery and interaction systems for smooth
+AR performance on mobile devices.
 </p>
 
 <p>
@@ -297,9 +317,11 @@ Watch Demo
 
 <div class="game-grid">
 
+<!-- HORSE -->
+
 <div class="game">
 
-<img src="assets/games/horse/1.jpg" class="game-img">
+<img src="assets/games/horse/icon.webp" class="game-img">
 
 <h4>Horse Simulator – Animal Games</h4>
 
@@ -307,73 +329,107 @@ Watch Demo
 
 <div class="screens">
 
-<img src="assets/games/horse/1.jpg">
-<img src="assets/games/horse/2.jpg">
-<img src="assets/games/horse/3.jpg">
+<img src="assets/games/horse/1.webp">
+<img src="assets/games/horse/2.webp">
+<img src="assets/games/horse/3.webp">
 
 </div>
 
-<a href="https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047" target="_blank" class="download-btn">View Game</a>
+<a href="https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047"
+target="_blank"
+class="download-btn">
+View Game
+</a>
 
 </div>
+
+<!-- LUMBER -->
 
 <div class="game">
 
-<img src="assets/games/lumber/1.jpg" class="game-img">
+<img src="assets/games/lumber/icon.webp" class="game-img">
 
 <h4>Idle Lumber Harvester Mill 3D</h4>
 
 <p>Idle simulation game with upgrade systems.</p>
 
-<a href="https://apps.apple.com/cd/app/idle-lumber-harvester-mill-3d/id6482293206" target="_blank" class="download-btn">View Game</a>
+<a href="https://apps.apple.com/cd/app/idle-lumber-harvester-mill-3d/id6482293206"
+target="_blank"
+class="download-btn">
+View Game
+</a>
 
 </div>
 
+<!-- CAFE -->
+
 <div class="game">
 
-<img src="assets/games/cafe/1.jpg" class="game-img">
+<img src="assets/games/cafe/icon.webp" class="game-img">
 
 <h4>Gaming Cafe – Internet Game</h4>
 
 <p>Management simulation where players run a gaming cafe.</p>
 
-<a href="https://apps.apple.com/cd/app/gaming-cafe-internet-game-2024/id6479306766" target="_blank" class="download-btn">View Game</a>
+<a href="https://apps.apple.com/cd/app/gaming-cafe-internet-game-2024/id6479306766"
+target="_blank"
+class="download-btn">
+View Game
+</a>
 
 </div>
 
+<!-- TANK -->
+
 <div class="game">
 
-<img src="assets/games/tank/1.jpg" class="game-img">
+<img src="assets/games/tank/icon.webp" class="game-img">
 
 <h4>Tank Fight – Battle Simulator</h4>
 
 <p>Physics-based tank battle game with AI enemies.</p>
 
-<a href="https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613" target="_blank" class="download-btn">View Game</a>
+<a href="https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613"
+target="_blank"
+class="download-btn">
+View Game
+</a>
 
 </div>
 
+<!-- BIKE -->
+
 <div class="game">
 
-<img src="assets/games/bike/1.jpg" class="game-img">
+<img src="assets/games/bike/icon.webp" class="game-img">
 
 <h4>Bike Games 2023 – BMX</h4>
 
 <p>Fast-paced stunt biking game with physics gameplay.</p>
 
-<a href="https://apps.apple.com/cd/app/bike-games-2023-bmx-mad-skills/id1627248104" target="_blank" class="download-btn">View Game</a>
+<a href="https://apps.apple.com/cd/app/bike-games-2023-bmx-mad-skills/id1627248104"
+target="_blank"
+class="download-btn">
+View Game
+</a>
 
 </div>
 
+<!-- AIRPORT -->
+
 <div class="game">
 
-<img src="assets/games/airport/1.jpg" class="game-img">
+<img src="assets/games/airport/icon.webp" class="game-img">
 
 <h4>Airport Manager – ATC Commander</h4>
 
 <p>Airport management simulation game with aircraft control systems.</p>
 
-<a href="https://apps.apple.com/id/app/airport-manager-atc-commander/id6469615183" target="_blank" class="download-btn">View Game</a>
+<a href="https://apps.apple.com/id/app/airport-manager-atc-commander/id6469615183"
+target="_blank"
+class="download-btn">
+View Game
+</a>
 
 </div>
 
@@ -417,7 +473,8 @@ Watch Demo
 
 <p>Phone: +91-7989513669</p>
 
-<p>LinkedIn:
+<p>
+LinkedIn:
 <a href="https://www.linkedin.com/in/ramesh-gowtham" target="_blank">
 linkedin.com/in/ramesh-gowtham
 </a>
