@@ -16,6 +16,8 @@ color:#222;
 line-height:1.6;
 }
 
+/* HEADER */
+
 header{
 background:linear-gradient(135deg,#0077ff,#00c3ff);
 color:white;
@@ -41,8 +43,10 @@ padding:12px 30px;
 border-radius:25px;
 text-decoration:none;
 font-weight:bold;
-margin:10px 8px;
+margin:8px;
 }
+
+/* MAIN */
 
 main{
 max-width:1100px;
@@ -59,6 +63,8 @@ color:#0077ff;
 border-bottom:2px solid #0077ff33;
 padding-bottom:8px;
 }
+
+/* PROJECT */
 
 .project{
 background:#fff;
@@ -94,12 +100,14 @@ border-radius:12px;
 
 .game-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
+/* GAME CARD */
+
 .game{
-background:white;
+background:#fff;
 border-radius:12px;
 box-shadow:0 2px 8px rgba(0,0,0,.1);
 padding:20px;
@@ -108,17 +116,17 @@ flex-direction:column;
 }
 
 .game-img{
+border-radius:15px;
 width:100%;
 height:200px;
 object-fit:contain;
-border-radius:15px;
 background:#f8f9fa;
 margin-bottom:15px;
 }
 
 .game h4{
-color:#0077ff;
 margin:10px 0 5px;
+color:#0077ff;
 }
 
 .game p{
@@ -136,14 +144,14 @@ font-size:.9rem;
 border-left:4px solid #0077ff;
 }
 
-/* MEDIA CAROUSEL */
+/* MEDIA ROW */
 
 .media-carousel{
 display:flex;
 gap:10px;
 overflow-x:auto;
 scroll-behavior:smooth;
-margin-top:12px;
+margin-top:10px;
 }
 
 .media-carousel::-webkit-scrollbar{
@@ -170,6 +178,8 @@ height:100%;
 border:none;
 }
 
+/* BUTTON */
+
 .download-btn{
 background:linear-gradient(135deg,#0077ff,#00c3ff);
 color:white;
@@ -180,6 +190,8 @@ font-weight:bold;
 margin-top:15px;
 align-self:center;
 }
+
+/* SKILLS */
 
 .skills{
 display:flex;
@@ -192,6 +204,8 @@ background:#e6f0ff;
 padding:8px 15px;
 border-radius:6px;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -221,6 +235,8 @@ font-size:.9rem;
 
 <main>
 
+<!-- AR PROJECT -->
+
 <section>
 
 <h2>🚀 Featured Client Project</h2>
@@ -236,29 +252,21 @@ font-size:.9rem;
 <p><strong>Tech Stack:</strong> Unity 2022 LTS, AR Foundation, Unity CCD, AI Logic, C#, Firebase</p>
 
 <p>
-Developed a commercial AR visualization application allowing users to place
-and preview furniture models in real-world environments.
+Developed a commercial AR visualization application allowing real-time product placement and preview in real environments.
 </p>
 
 <div class="game-promo">
-<strong>🎯 Key Achievement:</strong> Reduced loading times by 40% through asset optimization.
+🎯 Reduced loading time by 40% through asset optimization.
 </div>
 
-<div style="margin-top:15px">
-
-<strong>🎬 Demo:</strong>
-<a href="https://youtube.com/shorts/5qxHdqqwdP4" target="_blank">
-Watch AR Demo →
-</a>
-
-</div>
+<p style="margin-top:15px">
+🎬 <a href="https://youtube.com/shorts/5qxHdqqwdP4" target="_blank">Watch Demo</a>
+</p>
 
 </div>
 
 <div class="project-image">
-
 <img src="assets/demo.jpg">
-
 </div>
 
 </div>
@@ -266,6 +274,8 @@ Watch AR Demo →
 </div>
 
 </section>
+
+<!-- GAMES -->
 
 <section>
 
@@ -281,10 +291,10 @@ Watch AR Demo →
 
 <h4>Horse Simulator – Animal Games</h4>
 
-<p>Open-world horse racing simulator with AI behaviour and realistic mechanics.</p>
+<p>Open-world horse racing simulator featuring advanced AI behaviour and realistic gameplay.</p>
 
 <div class="game-promo">
-🔥 Realistic horse behaviour & dynamic environments
+🔥 Realistic horse behaviours & dynamic weather system
 </div>
 
 <div class="media-carousel">
@@ -300,11 +310,12 @@ Watch AR Demo →
 <div class="media-item"><img src="assets/games/horse/1.webp"></div>
 <div class="media-item"><img src="assets/games/horse/2.webp"></div>
 <div class="media-item"><img src="assets/games/horse/3.webp"></div>
-<div class="media-item"><img src="assets/games/horse/4.webp"></div>
 
 </div>
 
-<a href="https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047" target="_blank" class="download-btn">App Store</a>
+<a href="https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047"
+target="_blank"
+class="download-btn">App Store</a>
 
 </div>
 
@@ -317,10 +328,10 @@ Watch AR Demo →
 
 <h4>Tank Fight – Battle Simulator</h4>
 
-<p>Physics-based tank battle game with destructible terrain and AI enemies.</p>
+<p>Physics-based tank battle simulator with destructible environments and tactical AI.</p>
 
 <div class="game-promo">
-🎯 Tactical AI combat and environment destruction
+🎯 Destructible terrain & AI-driven combat
 </div>
 
 <div class="media-carousel">
@@ -335,13 +346,17 @@ Watch AR Demo →
 
 </div>
 
-<a href="https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613" target="_blank" class="download-btn">App Store</a>
+<a href="https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613"
+target="_blank"
+class="download-btn">App Store</a>
 
 </div>
 
 </div>
 
 </section>
+
+<!-- SKILLS -->
 
 <section>
 
@@ -360,6 +375,8 @@ Watch AR Demo →
 </div>
 
 </section>
+
+<!-- CONTACT -->
 
 <section>
 
@@ -386,6 +403,8 @@ Watch AR Demo →
 
 <script>
 
+/* auto scroll media */
+
 document.querySelectorAll(".media-carousel").forEach(carousel=>{
 
 let scroll=0;
@@ -394,7 +413,7 @@ setInterval(()=>{
 
 if(!carousel.matches(":hover")){
 
-scroll+=220;
+scroll+=210;
 
 if(scroll>=carousel.scrollWidth){
 scroll=0;
