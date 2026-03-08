@@ -1,90 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ramesh Gowtham Nemalipuri | Unity Game Developer</title>
+<title>Ramesh Gowtham Nemalipuri – Unity & AR Developer Portfolio</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Segoe UI,Roboto,Arial;
-background:#f5f7fb;
+font-family:'Segoe UI',Roboto,Arial;
+margin:0;
+background:#f5f7fa;
 color:#222;
 }
 
-/* HEADER */
-
 header{
-background:linear-gradient(135deg,#0066ff,#00c3ff);
+background:linear-gradient(135deg,#0077ff,#00c3ff);
 color:white;
-padding:70px 20px;
+padding:50px 20px;
 text-align:center;
 }
 
 header h1{
-font-size:2.4rem;
+margin:0;
+font-size:2.5rem;
 }
 
 header p{
-margin-top:10px;
-font-size:1.1rem;
+font-size:1.2rem;
+opacity:.9;
 }
 
-.btn{
+.cta-button{
 display:inline-block;
-margin-top:15px;
-padding:10px 22px;
 background:white;
-color:#0066ff;
+color:#0077ff;
+padding:12px 30px;
 border-radius:25px;
 text-decoration:none;
-font-weight:600;
-margin:6px;
+font-weight:bold;
+margin-top:20px;
 }
-
-/* MAIN */
 
 main{
 max-width:1100px;
-margin:auto;
-padding:40px 20px;
+margin:40px auto;
+padding:0 20px;
 }
 
 section{
-margin-bottom:60px;
+margin-bottom:50px;
 }
 
 h2{
-color:#0066ff;
-margin-bottom:20px;
-border-bottom:2px solid #e0e7ff;
-padding-bottom:6px;
+color:#0077ff;
+border-bottom:2px solid #0077ff33;
+padding-bottom:8px;
 }
 
 /* CARD */
 
-.card{
+.project,.experience,.contact-info{
 background:white;
-padding:25px;
 border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+padding:25px;
+}
+
+/* AR SECTION */
+
+.project-content{
+display:flex;
+gap:25px;
+align-items:flex-start;
+}
+
+.project-text{flex:1}
+
+.project-image{
+flex:0 0 300px;
+text-align:center;
+}
+
+.project-image img{
+width:100%;
+border-radius:12px;
+}
+
+@media(max-width:768px){
+.project-content{flex-direction:column}
+.project-image{width:100%}
 }
 
 /* GAME GRID */
 
 .game-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 }
 
 /* GAME CARD */
@@ -92,74 +106,75 @@ gap:30px;
 .game{
 background:white;
 border-radius:12px;
-box-shadow:0 4px 14px rgba(0,0,0,0.08);
+box-shadow:0 4px 12px rgba(0,0,0,.1);
 padding:20px;
-transition:.3s;
-}
-
-.game:hover{
-transform:translateY(-5px);
-}
-
-.game-header{
 display:flex;
-gap:15px;
-align-items:center;
+flex-direction:column;
+}
+
+.game-img{
+width:90px;
+height:90px;
+border-radius:20px;
+margin:auto;
 margin-bottom:10px;
-}
-
-.game-header img{
-width:70px;
-height:70px;
-border-radius:14px;
-}
-
-.game h3{
-color:#0066ff;
-}
-
-.tech{
-font-size:13px;
-color:#666;
-margin-bottom:8px;
-}
-
-/* VIDEO */
-
-.video iframe{
-width:100%;
-height:200px;
-border-radius:8px;
-margin-top:10px;
-}
-
-/* SCREENSHOTS */
-
-.screens{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:6px;
-margin-top:12px;
-}
-
-.screens img{
-width:100%;
-height:80px;
 object-fit:cover;
-border-radius:6px;
+}
+
+.game h4{
+color:#0077ff;
+margin:5px 0;
+text-align:center;
+}
+
+.game p{
+font-size:.95rem;
+color:#555;
+}
+
+/* MEDIA ROW */
+
+.media-row{
+display:flex;
+gap:10px;
+overflow-x:auto;
+padding-top:10px;
+scroll-behavior:smooth;
+}
+
+.media-row::-webkit-scrollbar{display:none;}
+
+.media-item{
+min-width:200px;
+height:130px;
+border-radius:8px;
+overflow:hidden;
+flex-shrink:0;
+}
+
+.media-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.media-item iframe{
+width:100%;
+height:100%;
+border:none;
 }
 
 /* BUTTON */
 
-.store-btn{
-display:inline-block;
-margin-top:12px;
-background:#0066ff;
+.download-btn{
+background:linear-gradient(135deg,#0077ff,#00c3ff);
 color:white;
-padding:8px 16px;
+padding:10px 18px;
 border-radius:20px;
 text-decoration:none;
-font-size:14px;
+font-weight:bold;
+margin-top:12px;
+align-self:center;
 }
 
 /* SKILLS */
@@ -171,19 +186,18 @@ gap:10px;
 }
 
 .skills span{
-background:#eaf1ff;
-padding:8px 14px;
+background:#e6f0ff;
+padding:8px 15px;
 border-radius:6px;
-font-size:14px;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:30px;
-background:#eee;
-margin-top:40px;
+background:#f0f0f0;
+padding:25px;
+font-size:.9rem;
 }
 
 </style>
@@ -193,34 +207,243 @@ margin-top:40px;
 
 <header>
 
-<h1>Ramesh Gowtham Nemalipuri</h1>
+<h1>👋 Ramesh Gowtham Nemalipuri</h1>
+<p>Unity Game & AR Developer | 3+ Years Experience | Hyderabad, India</p>
 
-<p>Unity Game Developer | 3.5+ Years Experience</p>
-
-<a href="mailto:gowthamfrigate@gmail.com" class="btn">Contact</a>
-<a href="Ramesh_Gowtham_CV.pdf" target="_blank" class="btn">View Resume</a>
-<a href="Ramesh_Gowtham_CV.pdf" download class="btn">Download Resume</a>
+<a href="mailto:gowthamfrigate@gmail.com" class="cta-button">📧 Hire Me</a>
 
 </header>
 
-
 <main>
+
+<!-- AR PROJECT (UNCHANGED) -->
 
 <section>
 
-<h2>Professional Summary</h2>
+<h2>🚀 Featured Client Project</h2>
 
-<div class="card">
+<div class="project">
+
+<div class="project-content">
+
+<div class="project-text">
+
+<h3>AR Product Visualization App – Craftforce Lounge Sculpting</h3>
+
+<p><b>Tech Stack:</b> Unity 2022 LTS, AR Foundation, Unity CCD, AI Logic, C#, Firebase</p>
 
 <p>
-
-Unity Game Developer with <b>3.5+ years experience</b> building and publishing mobile games using Unity and C#.
-
-Specialized in gameplay systems, UI architecture, performance optimization, and monetization integration.
-
-Developed and shipped <b>6+ commercial mobile games</b> with thousands of downloads worldwide.
-
+Developed a commercial AR visualization app for Craftforce Lounge Sculpting
+allowing real-time product placement and visualization.
 </p>
+
+<div style="margin-top:20px">
+
+<strong>🎬 Watch Demo:</strong>
+<a href="https://youtube.com/shorts/5qxHdqqwdP4" target="_blank">
+YouTube Demo →
+</a>
+
+</div>
+
+</div>
+
+<div class="project-image">
+
+<img src="assets/demo.jpg">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section>
+
+<h2>💼 Professional Experience</h2>
+
+<div class="experience">
+
+<h3>Unity Game Developer – Frigate Games Pvt Ltd</h3>
+
+<p><i>Aug 2022 – Present | Hyderabad</i></p>
+
+<ul>
+
+<li>Developed 5+ mobile games with 100K+ downloads</li>
+<li>Implemented monetization using AdMob & IronSource</li>
+<li>Built scalable content pipelines using Unity CCD</li>
+<li>Optimized performance reducing memory usage by 30%</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- GAMES -->
+
+<section>
+
+<h2>🎮 Published Mobile Games</h2>
+
+<div class="game-grid">
+
+<!-- HORSE -->
+
+<div class="game">
+
+<img src="assets/games/horse/icon.webp" class="game-img">
+
+<h4>Horse Simulator – Animal Games</h4>
+
+<p>Open-world horse racing and training simulator with AI behaviour and realistic gameplay.</p>
+
+<div class="media-row">
+
+<div class="media-item">
+<iframe src="https://www.youtube.com/embed/KJo8JVxrGQs"></iframe>
+</div>
+
+<div class="media-item">
+<iframe src="https://www.youtube.com/embed/kPB5_J7bZgg"></iframe>
+</div>
+
+<div class="media-item"><img src="assets/games/horse/1.webp"></div>
+<div class="media-item"><img src="assets/games/horse/2.webp"></div>
+<div class="media-item"><img src="assets/games/horse/3.webp"></div>
+<div class="media-item"><img src="assets/games/horse/4.webp"></div>
+
+</div>
+
+<a href="https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047" target="_blank" class="download-btn">App Store</a>
+
+</div>
+
+
+<!-- TANK -->
+
+<div class="game">
+
+<img src="assets/games/tank/icon.webp" class="game-img">
+
+<h4>Tank Fight – Battle Simulator</h4>
+
+<p>Physics-based tank combat simulator with AI enemies and destructible environments.</p>
+
+<div class="media-row">
+
+<div class="media-item">
+<iframe src="https://www.youtube.com/embed/diLICWZz2mw"></iframe>
+</div>
+
+<div class="media-item"><img src="assets/games/tank/1.webp"></div>
+<div class="media-item"><img src="assets/games/tank/2.webp"></div>
+<div class="media-item"><img src="assets/games/tank/3.webp"></div>
+
+</div>
+
+<a href="https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613" target="_blank" class="download-btn">App Store</a>
+
+</div>
+
+
+<!-- CAFE -->
+
+<div class="game">
+
+<img src="assets/games/cafe/icon.webp" class="game-img">
+
+<h4>Gaming Cafe – Internet Game</h4>
+
+<p>Business simulation where players manage and upgrade a gaming cafe.</p>
+
+<div class="media-row">
+
+<div class="media-item"><img src="assets/games/cafe/1.webp"></div>
+<div class="media-item"><img src="assets/games/cafe/2.webp"></div>
+<div class="media-item"><img src="assets/games/cafe/3.webp"></div>
+
+</div>
+
+<a href="https://apps.apple.com/cd/app/gaming-cafe-internet-game-2024/id6479306766" target="_blank" class="download-btn">App Store</a>
+
+</div>
+
+
+<!-- LUMBER -->
+
+<div class="game">
+
+<img src="assets/games/lumber/icon.webp" class="game-img">
+
+<h4>Idle Lumber Harvester Mill 3D</h4>
+
+<p>Idle resource management simulation with progressive upgrades.</p>
+
+<div class="media-row">
+
+<div class="media-item"><img src="assets/games/lumber/1.webp"></div>
+<div class="media-item"><img src="assets/games/lumber/2.webp"></div>
+<div class="media-item"><img src="assets/games/lumber/3.webp"></div>
+
+</div>
+
+<a href="https://apps.apple.com/cd/app/idle-lumber-harvester-mill-3d/id6482293206" target="_blank" class="download-btn">App Store</a>
+
+</div>
+
+
+<!-- BIKE -->
+
+<div class="game">
+
+<img src="assets/games/bike/icon.webp" class="game-img">
+
+<h4>Bike Games 2023 – BMX</h4>
+
+<p>Fast-paced stunt biking game with physics gameplay.</p>
+
+<div class="media-row">
+
+<div class="media-item"><img src="assets/games/bike/1.webp"></div>
+<div class="media-item"><img src="assets/games/bike/2.webp"></div>
+<div class="media-item"><img src="assets/games/bike/3.webp"></div>
+
+</div>
+
+<a href="https://apps.apple.com/cd/app/bike-games-2023-bmx-mad-skills/id1627248104" target="_blank" class="download-btn">App Store</a>
+
+</div>
+
+
+<!-- AIRPORT -->
+
+<div class="game">
+
+<img src="assets/games/airport/icon.webp" class="game-img">
+
+<h4>Airport Manager – ATC Commander</h4>
+
+<p>Airport management simulator featuring aircraft control systems.</p>
+
+<div class="media-row">
+
+<div class="media-item"><img src="assets/games/airport/1.webp"></div>
+<div class="media-item"><img src="assets/games/airport/2.webp"></div>
+<div class="media-item"><img src="assets/games/airport/3.webp"></div>
+
+</div>
+
+<a href="https://apps.apple.com/id/app/airport-manager-atc-commander/id6469615183" target="_blank" class="download-btn">App Store</a>
+
+</div>
 
 </div>
 
@@ -229,33 +452,17 @@ Developed and shipped <b>6+ commercial mobile games</b> with thousands of downlo
 
 <section>
 
-<h2>Published Mobile Games</h2>
-
-<div id="games" class="game-grid"></div>
-
-</section>
-
-
-<section>
-
-<h2>Technical Skills</h2>
-
-<div class="card">
+<h2>🧰 Technical Skills</h2>
 
 <div class="skills">
 
-<span>Unity 3D</span>
+<span>Unity</span>
 <span>C#</span>
-<span>Mobile Game Development</span>
-<span>Gameplay Systems</span>
-<span>UI Systems</span>
 <span>AR Foundation</span>
 <span>Firebase</span>
 <span>AdMob</span>
 <span>IronSource</span>
-<span>Performance Optimization</span>
-
-</div>
+<span>Unity CCD</span>
 
 </div>
 
@@ -264,13 +471,18 @@ Developed and shipped <b>6+ commercial mobile games</b> with thousands of downlo
 
 <section>
 
-<h2>Contact</h2>
+<h2>📬 Contact</h2>
 
-<div class="card">
+<div class="contact-info">
 
-<p>Email: gowthamfrigate@gmail.com</p>
-<p>Phone: +91-7989513669</p>
-<p>Location: Hyderabad, India</p>
+<p>
+
+📧 gowthamfrigate@gmail.com<br>
+📞 +91-7989513669<br>
+🔗 linkedin.com/in/ramesh-gowtham<br>
+📍 Hyderabad, India
+
+</p>
 
 </div>
 
@@ -280,118 +492,9 @@ Developed and shipped <b>6+ commercial mobile games</b> with thousands of downlo
 
 <footer>
 
-<p>© 2026 Ramesh Gowtham Nemalipuri</p>
+<p>© 2025 Ramesh Gowtham Nemalipuri</p>
 
 </footer>
 
-
-<script>
-
-const games=[
-
-{
-name:"Horse Simulator – Animal Games",
-folder:"horse",
-screens:6,
-tech:"Unity · C# · AI Behaviour",
-desc:"Open-world horse simulation game featuring AI animal behaviour and exploration mechanics.",
-app:"https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047",
-video:"https://www.youtube.com/embed/KJo8JVxrGQs"
-},
-
-{
-name:"Tank Fight – Battle Simulator",
-folder:"tank",
-screens:3,
-tech:"Unity · Physics · Combat Systems",
-desc:"Physics-based tank battle simulator featuring enemy AI and combat gameplay.",
-app:"https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613",
-video:"https://www.youtube.com/embed/diLICWZz2mw"
-},
-
-{
-name:"Gaming Cafe – Internet Game",
-folder:"cafe",
-screens:5,
-tech:"Unity · Simulation · UI Systems",
-desc:"Management simulation where players build and upgrade their gaming cafe.",
-app:"https://apps.apple.com/cd/app/gaming-cafe-internet-game-2024/id6479306766"
-},
-
-{
-name:"Idle Lumber Harvester Mill 3D",
-folder:"lumber",
-screens:4,
-tech:"Unity · Idle Systems",
-desc:"Idle management game where players harvest wood and upgrade production.",
-app:"https://apps.apple.com/cd/app/idle-lumber-harvester-mill-3d/id6482293206"
-},
-
-{
-name:"Bike Games 2023 – BMX",
-folder:"bike",
-screens:3,
-tech:"Unity · Physics Gameplay",
-desc:"Fast-paced BMX stunt racing game with physics-based mechanics.",
-app:"https://apps.apple.com/cd/app/bike-games-2023-bmx-mad-skills/id1627248104"
-},
-
-{
-name:"Airport Manager – ATC Commander",
-folder:"airport",
-screens:3,
-tech:"Unity · Simulation Systems",
-desc:"Airport management simulator featuring aircraft control mechanics.",
-app:"https://apps.apple.com/id/app/airport-manager-atc-commander/id6469615183"
-}
-
-];
-
-const container=document.getElementById("games");
-
-games.forEach(game=>{
-
-let screenshots="";
-
-for(let i=1;i<=game.screens;i++){
-screenshots+=`<img src="assets/games/${game.folder}/${i}.webp">`;
-}
-
-let video=game.video?`<div class="video">
-<iframe src="${game.video}" frameborder="0" allowfullscreen></iframe>
-</div>`:"";
-
-container.innerHTML+=`
-
-<div class="game">
-
-<div class="game-header">
-<img src="assets/games/${game.folder}/icon.webp">
-<div>
-<h3>${game.name}</h3>
-<div class="tech">${game.tech}</div>
-</div>
-</div>
-
-<p>${game.desc}</p>
-
-${video}
-
-<div class="screens">
-${screenshots}
-</div>
-
-<a href="${game.app}" target="_blank" class="store-btn">
-View on App Store
-</a>
-
-</div>
-
-`;
-
-});
-
-</script>
-
 </body>
-</html>
+                          </html>
