@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ramesh Gowtham Nemalipuri | Unity Game & AR Developer</title>
+<title>Ramesh Gowtham Nemalipuri | Unity Game Developer</title>
 
 <style>
 
@@ -21,8 +22,6 @@ color:#222;
 line-height:1.6;
 }
 
-/* HEADER */
-
 header{
 background:linear-gradient(135deg,#0066ff,#00c3ff);
 color:white;
@@ -31,7 +30,7 @@ text-align:center;
 }
 
 header h1{
-font-size:2.6rem;
+font-size:2.5rem;
 }
 
 header p{
@@ -42,7 +41,7 @@ font-size:1.1rem;
 .btn{
 display:inline-block;
 margin-top:15px;
-padding:12px 26px;
+padding:12px 24px;
 background:white;
 color:#0066ff;
 border-radius:30px;
@@ -50,8 +49,6 @@ text-decoration:none;
 font-weight:600;
 margin-right:10px;
 }
-
-/* MAIN */
 
 main{
 max-width:1100px;
@@ -70,8 +67,6 @@ border-bottom:2px solid #e0e7ff;
 padding-bottom:6px;
 }
 
-/* CARD */
-
 .card{
 background:white;
 padding:25px;
@@ -79,37 +74,305 @@ border-radius:12px;
 box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* AR PROJECT */
+/* GAME GRID */
 
-.project-content{
-display:flex;
+.game-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
-align-items:flex-start;
 }
 
-.project-text{
-flex:1;
-}
-
-.project-image{
-width:320px;
-}
-
-.project-image img{
-width:100%;
+.game{
+background:white;
+padding:20px;
 border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.3s;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-
-.project-content{
-flex-direction:column;
+.game:hover{
+transform:translateY(-5px);
 }
 
-.project-image{
+.game-img{
 width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* Screenshots */
+
+.screens{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:6px;
+margin-top:10px;
+}
+
+.screens img{
+width:100%;
+height:70px;
+object-fit:cover;
+border-radius:6px;
+}
+
+/* Buttons */
+
+.download-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+background:#0066ff;
+color:white;
+border-radius:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+.video-btn{
+background:#ff3b3b;
+color:white;
+padding:8px 16px;
+border-radius:20px;
+text-decoration:none;
+margin-left:5px;
+}
+
+/* Skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skills span{
+background:#eaf1ff;
+padding:8px 14px;
+border-radius:6px;
+font-size:14px;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:30px;
+background:#eee;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<h1>👋 Ramesh Gowtham Nemalipuri</h1>
+
+<p>Unity Game Developer | 3.5+ Years Experience</p>
+
+<a href="mailto:gowthamfrigate@gmail.com" class="btn">Contact</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" target="_blank" class="btn">View Resume</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" download class="btn">Download Resume</a>
+
+</header>
+
+
+<main>
+
+<section>
+
+<h2>👨‍💻 Professional Summary</h2>
+
+<div class="card">
+
+<p>
+
+Unity Game Developer with <b>3.5+ years experience</b> building and publishing mobile games using Unity and C#.
+
+Developed and shipped <b>6+ mobile games</b> and delivered commercial AR applications using Unity AR Foundation.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>🎮 Published Mobile Games</h2>
+
+<div id="gamesContainer" class="game-grid"></div>
+
+</section>
+
+
+<section>
+
+<h2>🧰 Technical Skills</h2>
+
+<div class="card">
+
+<div class="skills">
+
+<span>Unity 3D</span>
+<span>C#</span>
+<span>Gameplay Programming</span>
+<span>Mobile Game Development</span>
+<span>AR Foundation</span>
+<span>Firebase</span>
+<span>AdMob</span>
+<span>IronSource</span>
+<span>Optimization</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>📬 Contact</h2>
+
+<div class="card">
+
+<p>Email: gowthamfrigate@gmail.com</p>
+
+<p>Phone: +91-7989513669</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/ramesh-gowtham" target="_blank">
+linkedin.com/in/ramesh-gowtham
+</a>
+</p>
+
+<p>Location: Hyderabad, India</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>© 2026 Ramesh Gowtham Nemalipuri</p>
+<p>Unity Game Developer Portfolio</p>
+
+</footer>
+
+
+<script>
+
+/* Game data */
+
+const games = [
+
+{
+name:"Horse Simulator – Animal Games",
+folder:"horse",
+screens:6,
+app:"https://apps.apple.com/cd/app/horse-training-racing-games/id6451202047",
+video:"https://www.youtube.com/embed/KJo8JVxrGQs"
+},
+
+{
+name:"Idle Lumber Harvester Mill 3D",
+folder:"lumber",
+screens:4,
+app:"https://apps.apple.com/cd/app/idle-lumber-harvester-mill-3d/id6482293206"
+},
+
+{
+name:"Gaming Cafe – Internet Game",
+folder:"cafe",
+screens:5,
+app:"https://apps.apple.com/cd/app/gaming-cafe-internet-game-2024/id6479306766"
+},
+
+{
+name:"Tank Fight – Battle Simulator",
+folder:"tank",
+screens:3,
+app:"https://apps.apple.com/cd/app/tank-fight-battle-simulator/id6477709613"
+},
+
+{
+name:"Bike Games 2023 – BMX",
+folder:"bike",
+screens:3,
+app:"https://apps.apple.com/cd/app/bike-games-2023-bmx-mad-skills/id1627248104"
+},
+
+{
+name:"Airport Manager – ATC Commander",
+folder:"airport",
+screens:3,
+app:"https://apps.apple.com/id/app/airport-manager-atc-commander/id6469615183"
+}
+
+];
+
+
+const container = document.getElementById("gamesContainer");
+
+games.forEach(game => {
+
+let screenshots="";
+
+for(let i=1;i<=game.screens;i++){
+screenshots += `<img src="assets/games/${game.folder}/${i}.webp">`;
+}
+
+let video = game.video ? `
+<iframe width="100%" height="200"
+src="${game.video}"
+frameborder="0"
+allowfullscreen></iframe>
+` : "";
+
+container.innerHTML += `
+
+<div class="game">
+
+<img src="assets/games/${game.folder}/icon.webp" class="game-img">
+
+<h4>${game.name}</h4>
+
+${video}
+
+<div class="screens">
+${screenshots}
+</div>
+
+<a href="${game.app}" target="_blank" class="download-btn">
+View Game
+</a>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+
+</body>
+  </html>width:100%;
 }
 
 }
