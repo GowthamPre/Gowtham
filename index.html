@@ -10,7 +10,10 @@
 <style>
 
 /* GENERAL */
-
+html{
+scroll-behavior:smooth;
+}
+  
 body{
 font-family:Segoe UI,Roboto,Arial;
 margin:0;
@@ -20,14 +23,65 @@ line-height:1.6;
 }
 
 /* HEADER */
-
 header{
-background:linear-gradient(135deg,#0077ff,#00c3ff);
+background:
+linear-gradient(
+135deg,
+#0f172a 0%,
+#111827 50%,
+#1e293b 100%
+);
 color:white;
-padding:60px 20px;
+padding:90px 20px;
 text-align:center;
+position:relative;
+overflow:hidden;
 }
 
+  header::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:
+radial-gradient(
+rgba(255,255,255,.15),
+transparent
+);
+
+top:-150px;
+right:-100px;
+}
+
+.hero-highlights{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+margin-top:20px;
+}
+
+.hero-highlights span{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(8px);
+padding:10px 18px;
+border-radius:30px;
+font-size:14px;
+}
+
+  .fade{
+opacity:0;
+transform:translateY(30px);
+transition:
+opacity .8s ease,
+transform .8s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+  
 header h1{
 margin:0;
 font-size:2.4rem;
@@ -88,6 +142,8 @@ box-shadow:0 4px 10px rgba(0,0,0,0.08);
 display:flex;
 gap:25px;
 align-items:flex-start;
+  border-left:5px solid #0077ff;
+padding-left:20px;
 }
 
 .project-image{
@@ -104,6 +160,16 @@ border-radius:12px;
 .project-image{width:100%}
 }
 
+  .featured-badge{
+display:inline-block;
+background:#0077ff;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:10px;
+}
+  
 /* GAME GRID */
 
 .game-grid{
@@ -121,12 +187,19 @@ box-shadow:0 6px 18px rgba(0,0,0,0.08);
 padding:20px;
 display:flex;
 flex-direction:column;
-transition:.25s;
+  transition:
+transform .3s ease,
+box-shadow .3s ease;
+
 }
 
 .game:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 24px rgba(0,0,0,0.12);
+transform:
+translateY(-8px)
+scale(1.01);
+
+box-shadow:
+0 16px 30px rgba(0,0,0,.15);
 }
 
 .game img.icon{
@@ -161,6 +234,7 @@ overflow-x:auto;
 scroll-behavior:smooth;
 margin-top:12px;
 padding-bottom:4px;
+  scroll-snap-type:x mandatory;
 }
 
 .media-carousel::-webkit-scrollbar{
@@ -178,6 +252,7 @@ height:130px;
 border-radius:8px;
 overflow:hidden;
 flex-shrink:0;
+  scroll-snap-align:start;
 }
 
 .media-item img{
@@ -206,6 +281,17 @@ text-decoration:none;
 align-self:center;
 }
 
+  .media-item{
+overflow:hidden;
+}
+
+.media-item img{
+transition:transform .4s ease;
+}
+
+.media-item:hover img{
+transform:scale(1.08);
+}
 /* SKILLS */
 
 .skills{
@@ -221,6 +307,34 @@ border-radius:6px;
 font-size:14px;
 }
 
+  .stats{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+max-width:1100px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.stat{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:
+0 6px 18px rgba(0,0,0,.08);
+}
+
+.stat h2{
+margin:0;
+font-size:2rem;
+color:#0077ff;
+border:none;
+}
+  
 /* CONTACT */
 
 .contact a{
@@ -246,18 +360,66 @@ margin-top:40px;
 
 <header>
 
-<h1>👋 Ramesh Gowtham Nemalipuri</h1>
+<h1>Ramesh Gowtham Nemalipuri</h1>
 
-<p>Unity Game Developer | 3.5+ Years Experience</p>
+<p>
+Unity Developer | Mobile Games & AR Applications
+</p>
 
-<a href="mailto:gowthamfrigate@gmail.com" class="btn">Contact</a>
+<p style="max-width:700px;margin:15px auto;opacity:.9;">
+Building mobile games and AR experiences for Android, iOS, and real-world business applications since 2022.
+</p>
 
-<a href="Ramesh_Gowtham_CV.pdf" target="_blank" class="btn">View Resume</a>
+<a href="https://www.linkedin.com/in/ramesh-gowtham-nemalipuri-23034018a" target="_blank" class="btn">
+LinkedIn
+</a>
 
-<a href="Ramesh_Gowtham_CV.pdf" download class="btn">Download Resume</a>
+<!-- <a href="YOUR_GITHUB_URL" target="_blank" class="btn">
+GitHub
+</a> -->
+
+<a href="mailto:gowthamfrigate@gmail.com" class="btn">
+Contact
+</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" target="_blank" class="btn">
+View Resume
+</a>
+
+<a href="Ramesh_Gowtham_CV.pdf" download class="btn">
+Download Resume
+</a>
 
 </header>
 
+  <section>
+
+<div class="stats">
+
+<div class="stat">
+<h2>3.5+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h2>6+</h2>
+<p>Published Games</p>
+</div>
+
+<div class="stat">
+<h2>2</h2>
+<p>Platforms</p>
+</div>
+
+<div class="stat">
+<h2>1</h2>
+<p>Commercial AR App</p>
+</div>
+
+</div>
+
+</section>
+  
 <main>
 
 <!-- SUMMARY -->
@@ -270,9 +432,11 @@ margin-top:40px;
 
 <p>
 
-Unity Game Developer with <b>3.5+ years experience</b> building mobile games using Unity and C#.
+Unity Developer with 3.5+ years of experience developing, publishing, and maintaining mobile games and AR applications using Unity and C#.
 
-Developed and shipped <b>6+ commercial mobile games</b> and built AR visualization applications using AR Foundation.
+Experienced in gameplay systems, UI development, Firebase Analytics, monetization, cloud content delivery, and Android/iOS deployment.
+
+Published multiple commercial mobile games and delivered a client-facing AR visualization application used for real-world product demonstrations.
 
 </p>
 
@@ -292,17 +456,38 @@ Developed and shipped <b>6+ commercial mobile games</b> and built AR visualizati
 
 <div>
 
-<h3>AR Product Visualization – Craftforce Lounge Sculpting</h3>
-
-<p><b>Tech:</b> Unity, AR Foundation, Unity CCD</p>
+  <span class="featured-badge">
+⭐ Featured Project
+</span>
+<h3>AR Product Visualization Platform</h3>
 
 <p>
 
-Developed a commercial AR visualization application allowing users to place and preview furniture models in real environments.
+Developed a commercial AR application for a sculpture and furniture business, enabling customers to visualize products in real-world environments before purchase.
 
 </p>
 
-<p><b>Achievement:</b> Reduced loading time by 40% through asset optimization.</p>
+<p>
+
+Implemented dynamic cloud-based model delivery using Unity Cloud Content Delivery (CCD), JSON-driven asset management, reusable UI systems, and local caching to improve runtime performance.
+
+</p>
+
+<p>
+
+Responsible for development, testing, deployment, and client delivery on iPhone and iPad devices.
+
+</p>
+
+<p>
+
+<b>Technologies:</b> Unity, AR Foundation, Unity CCD, JSON, iOS Deployment
+
+</p>
+
+  
+
+<p><b>Achievement:</b> Implemented local caching and optimized runtime asset loading to improve user experience.</p>
 
 <a href="https://youtube.com/shorts/5qxHdqqwdP4" target="_blank">Watch Demo</a>
 
@@ -336,7 +521,23 @@ Developed a commercial AR visualization application allowing users to place and 
 
 <h4>Horse Simulator – Animal Games</h4>
 
-<p><b>Role:</b> Unity Gameplay Developer — implemented AI behaviour and player controls.</p>
+<p>
+
+<b>Role:</b> Unity Developer
+
+</p>
+
+<p>
+
+Contributed to gameplay systems, mission mechanics, UI implementation, player progression, analytics integration, production maintenance, and store releases.
+
+</p>
+
+<p>
+
+Worked on feature development, bug fixing, optimization, and content updates for Android and iOS builds.
+
+</p>
 
 <div class="media-carousel">
 
@@ -364,9 +565,17 @@ Developed a commercial AR visualization application allowing users to place and 
 <img src="assets/games/tank/icon.webp" class="icon">
 
 <h4>Tank Fight – Battle Simulator</h4>
+<p>
 
-<p><b>Role:</b> Gameplay Programmer — built combat systems and enemy AI.</p>
+<b>Role:</b> Unity Developer
 
+</p>
+
+<p>
+
+Implemented gameplay features, combat systems, UI functionality, and performance improvements for a mobile tank battle simulation game.
+
+</p>
 <div class="media-carousel">
 
 <div class="media-item">
@@ -390,7 +599,17 @@ Developed a commercial AR visualization application allowing users to place and 
 
 <h4>Gaming Cafe – Internet Game</h4>
 
-<p><b>Role:</b> Unity Developer — built gameplay progression and UI systems.</p>
+<p>
+
+<b>Role:</b> Unity Developer
+
+</p>
+
+<p>
+
+Developed progression systems, UI workflows, gameplay features, and economy mechanics for a business simulation game.
+
+</p>
 
 <div class="media-carousel">
 
@@ -411,8 +630,17 @@ Developed a commercial AR visualization application allowing users to place and 
 
 <h4>Idle Lumber Harvester Mill 3D</h4>
 
-<p><b>Role:</b> Unity Developer — built idle economy systems.</p>
+<p>
 
+<b>Role:</b> Unity Developer
+
+</p>
+
+<p>
+
+Developed gameplay features, idle progression systems, resource collection mechanics, and mobile optimization features.
+
+</p>
 <div class="media-carousel">
 
 <div class="media-item"><img src="assets/games/lumber/1.webp"></div>
@@ -432,8 +660,17 @@ Developed a commercial AR visualization application allowing users to place and 
 
 <h4>Bike Games 2023 – BMX</h4>
 
-<p><b>Role:</b> Unity Developer — implemented physics-based bike mechanics.</p>
+<p>
 
+<b>Role:</b> Unity Developer
+
+</p>
+
+<p>
+
+Implemented gameplay mechanics, progression systems, UI interactions, and optimization for a physics-based bike simulation game.
+
+</p>
 <div class="media-carousel">
 
 <div class="media-item"><img src="assets/games/bike/1.webp"></div>
@@ -453,8 +690,17 @@ Developed a commercial AR visualization application allowing users to place and 
 
 <h4>Airport Manager – ATC Commander</h4>
 
-<p><b>Role:</b> Unity Developer — implemented ATC simulation mechanics.</p>
+<p>
 
+<b>Role:</b> Unity Developer
+
+</p>
+
+<p>
+
+Developed gameplay systems, airport management mechanics, UI workflows, analytics integration, and monetization features for a mobile ATC simulation game.
+
+</p>
 <div class="media-carousel">
 
 <div class="media-item"><img src="assets/games/airport/1.webp"></div>
@@ -470,27 +716,162 @@ Developed a commercial AR visualization application allowing users to place and 
 
 </section>
 
+  <section>
+
+<h2>Professional Experience</h2>
+
+<div class="card">
+
+<h3>Frigate Games Pvt. Ltd.</h3>
+
+<p>
+Aug 2022 – Mar 2026
+</p>
+
+<ul>
+
+<li>Developed and published multiple mobile games for Android and iOS.</li>
+
+<li>Implemented gameplay systems, UI features, analytics integration, and monetization.</li>
+
+<li>Worked with Firebase Analytics, AdMob, IronSource, Unity CCD, and Addressables.</li>
+
+<li>Developed and deployed a commercial AR visualization application.</li>
+
+<li>Performed production maintenance, bug fixing, and store updates.</li>
+
+</ul>
+
+<hr>
+
+<h3>Limitless Games</h3>
+
+<p>
+Mar 2026 – Present
+</p>
+
+<ul>
+
+<li>Maintaining and improving live mobile game products.</li>
+
+<li>Publishing updates and optimizing production builds.</li>
+
+<li>Worked on React-based HRMS SaaS modules and software product features while maintaining live game products.</li>
+
+</ul>
+
+</div>
+
+</section>
+  
 <!-- SKILLS -->
 
 <section>
 
 <h2>Technical Skills</h2>
 
-<div class="card skills">
+<div class="card">
+
+<h3>Game Development</h3>
+
+<div class="skills">
 
 <span>Unity</span>
 <span>C#</span>
 <span>Gameplay Programming</span>
-<span>Mobile Game Development</span>
-<span>AR Foundation</span>
-<span>Firebase</span>
+<span>UI / UGUI</span>
+<span>Mobile Optimization</span>
+
+</div>
+
+<h3>Live Operations</h3>
+
+<div class="skills">
+
+<span>Firebase Analytics</span>
+<span>Remote Config</span>
+<span>Crashlytics</span>
 <span>AdMob</span>
 <span>IronSource</span>
 
 </div>
 
+<h3>Content Delivery</h3>
+
+<div class="skills">
+
+<span>Unity CCD</span>
+<span>Addressables</span>
+<span>JSON</span>
+
+</div>
+
+<h3>Additional Technologies</h3>
+
+<div class="skills">
+
+<span>React</span>
+<span>Laravel</span>
+<span>Git</span>
+
+</div>
+
+</div>
+
 </section>
 
+  <section>
+
+<h2>What I Do</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Mobile Game Development using Unity and C#</li>
+
+<li>AR Application Development using AR Foundation</li>
+
+<li>Android and iOS Publishing</li>
+
+<li>Firebase Analytics and Monetization Integration</li>
+
+<li>Cloud-Based Asset Delivery using Unity CCD</li>
+
+<li>Live Product Maintenance and Updates</li>
+
+</ul>
+
+</div>
+
+</section>
+
+  <section>
+
+<h2>Key Achievements</h2>
+
+<div class="card">
+
+<ul>
+
+<li>3.5+ years of professional Unity development experience</li>
+
+<li>Published 6+ mobile games on Android and iOS platforms</li>
+
+<li>Developed and delivered a commercial AR application</li>
+
+<li>Experience with Firebase Analytics, AdMob, and monetization systems</li>
+
+<li>Implemented cloud-based content delivery using Unity CCD</li>
+
+<li>Maintained and updated live production game builds</li>
+
+</ul>
+
+</div>
+
+</section>
+  
 <!-- CONTACT -->
 
 <section>
@@ -525,34 +906,66 @@ Developed a commercial AR visualization application allowing users to place and 
 
 document.querySelectorAll(".media-carousel").forEach(carousel=>{
 
-let scroll=0;
 let paused=false;
 
-carousel.addEventListener("mouseenter",()=>paused=true);
-carousel.addEventListener("mouseleave",()=>paused=false);
-carousel.addEventListener("touchstart",()=>paused=true);
+carousel.addEventListener("mouseenter",()=>{
+paused=true;
+});
+
+carousel.addEventListener("mouseleave",()=>{
+paused=false;
+});
 
 setInterval(()=>{
 
-if(!paused){
+if(paused) return;
 
-scroll+=210;
-
-if(scroll>=carousel.scrollWidth){
-scroll=0;
-}
-
-carousel.scrollTo({
-left:scroll,
+carousel.scrollBy({
+left:220,
 behavior:"smooth"
 });
 
+if(
+carousel.scrollLeft +
+carousel.clientWidth >=
+carousel.scrollWidth - 20
+){
+
+setTimeout(()=>{
+
+carousel.scrollTo({
+left:0,
+behavior:"smooth"
+});
+
+},1200);
+
 }
 
-},3500);
+},4000);
 
 });
 
+  const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+},{threshold:.1});
+
+document.querySelectorAll("section").forEach(section=>{
+
+section.classList.add("fade");
+
+observer.observe(section);
+
+});
+  
 </script>
 
 </body>
